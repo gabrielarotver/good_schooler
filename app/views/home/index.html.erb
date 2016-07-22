@@ -1,0 +1,15 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<%# someone needs to learn how to type%>
+
+<%= form_tag('/post/yoga_carlos?name=babybaby&lyrics=notoriousbig') do %>
+
+  <!-- "shoe":{"size":"56 (or whatever user input)"} size is part of a subhash. These things are in paramams when save is hit -->
+  <input name="shoe[size]" value="" type="text" />
+
+  <div>
+    <%= submit_tag 'Save' %>
+  </div>
+<% end %>
+
+<%=render 'codeschools'%>

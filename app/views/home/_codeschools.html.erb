@@ -1,0 +1,8 @@
+<ul>
+  <%@codeschools.each do |codeschool|%>
+    <li>
+      <%=codeschool.name%>
+      <%= render 'users/list', users: codeschool.users%>
+    </li>
+  <%end%>
+</ul>

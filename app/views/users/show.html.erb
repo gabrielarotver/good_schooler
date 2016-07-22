@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<!-- debug and you pass it some instance, make sure you output it by using = in erb it's going to output a bunch of stuff to the html that might help you find the issue. -->
+
+<!-- use content tag to automatically generate html code for you -->
+<%= content_tag_for(:p, @user.code_school) do %>
+    <%= image_tag(@user.image_url)%>
+<% end %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
